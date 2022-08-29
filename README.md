@@ -32,8 +32,8 @@ struct ContentView: View {
 </td>
 <td> 
 
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-d.png?raw=true#gh-dark-mode-only" width="160">
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-l.png?raw=true#gh-light-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-d.png?raw=true#gh-dark-mode-only" min-width="140">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-l.png?raw=true#gh-light-mode-only" min-width="140">
 
 </td>
 </tr>
@@ -63,8 +63,8 @@ struct ContentView: View {
 </td>
 <td> 
 
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="160">
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" min-width="140">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" min-width="140">
 
 </td>
 </tr>
@@ -94,8 +94,8 @@ struct ContentView: View {
 </td>
 <td> 
 
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="160">
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" min-width="140">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" min-width="140">
 
 </td>
 </tr>
