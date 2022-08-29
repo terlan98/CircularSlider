@@ -29,4 +29,4 @@ struct ContentView: View {
 ```
 
 # License
-CircularSlider is released under the MIT license. See LICENSE for details
+CircularSlider is released under the MIT license. See [LICENSE](https://github.com/terlan98/CircularSlider/blob/main/LICENSE) for details
