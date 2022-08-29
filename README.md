@@ -40,6 +40,12 @@ struct ContentView: View {
 <tr></tr>
 
 <tr>
+<td> 
+
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="150">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="150">
+
+</td>
 <td>
 
 ```swift
@@ -61,16 +67,17 @@ struct ContentView: View {
 }
 ```
 </td>
-<td> 
 
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="150">
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="150">
-
-</td>
 </tr>
 <tr></tr>
     
 <tr>
+<td> 
+
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="155">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="155">
+
+</td>
 <td>
 
 ```swift
@@ -92,12 +99,7 @@ struct ContentView: View {
 }
 ```
 </td>
-<td> 
 
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="150">
-<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="150">
-
-</td>
 </tr>
     
 </table>
