@@ -16,7 +16,7 @@ You can install `CircularSlider` by going to your Project settings > Swift Packa
 ## 🚀 How do I use it?
 <table>
 <tr>
-<td> 
+<td width="160"> 
 
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-d.png?raw=true#gh-dark-mode-only" width="150">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-l.png?raw=true#gh-light-mode-only" width="150">
@@ -40,7 +40,7 @@ struct ContentView: View {
 <tr></tr>
 
 <tr>
-<td> 
+<td width="160"> 
 
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="150">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="150">
@@ -72,7 +72,7 @@ struct ContentView: View {
 <tr></tr>
     
 <tr>
-<td> 
+<td width="160"> 
 
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="155">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="155">
