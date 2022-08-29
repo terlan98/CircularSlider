@@ -5,38 +5,101 @@
 A view that can be interacted with by dragging a knob over a circular path to select a value
 
 ## Features
-
+- [x] 🌈 Customizable colors 
+- [x] 📐 Customizable size 
+- [x] 🔠 Customizable font 
+- [x] 🏷 Customizable text with prefix and suffix
 
 ## 🛠 How do I install it?
 You can install `CircularSlider` by going to your Project settings > Swift Packages and add the repository by providing the GitHub URL. Alternatively, you can go to File > Swift Packages > Add Package Dependencies...
 
 ## 🚀 How do I use it?
 <table>
-    <tr>
-        <td> 
-            
-```swift
-    struct ContentView: View {
-        @State var value = 50.0
+<tr>
+<td>
 
-        var body: some View {
-            VStack {
-                CircularSlider(currentValue: $value,
-                               minValue: 1,
-                               maxValue: 60,
-                               knobColor: .init(red: 0.5, green: 0.5, blue: 0.5),
-                               progressLineColor: .init(red: 0.84, green: 0.93, blue: 0.09),
-                               font: .custom("HelveticaNeue-Light", size: 35),
-                               backgroundColor: .yellow.opacity(0.06),
-                               currentValueSuffix: " min")
-            }
+```swift
+struct ContentView: View {
+    @State var value = 50.0
+
+    var body: some View {
+        VStack {
+            CircularSlider(currentValue: $value)
         }
     }
+}
 ```
-            
-        </td>
-        <td> 300 </td>
-    </tr>
+</td>
+<td> 
+
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-d.png?raw=true#gh-dark-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-l.png?raw=true#gh-light-mode-only" width="160">
+
+</td>
+</tr>
+<tr></tr>
+
+<tr>
+<td>
+
+```swift
+struct ContentView: View {
+    @State var value = 25.0
+
+    var body: some View {
+        VStack {
+            CircularSlider(currentValue: $value,
+                           minValue: 1,
+                           maxValue: 30,
+                           knobColor: .orange,
+                           progressLineColor: .orange,
+                           font: .custom("HelveticaNeue-Light", size: 35),
+                           backgroundColor: .gray.opacity(0.05),
+                           currentValueSuffix: "$")
+        }
+    }
+}
+```
+</td>
+<td> 
+
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="160">
+
+</td>
+</tr>
+<tr></tr>
+    
+<tr>
+<td>
+
+```swift
+struct ContentView: View {
+    @State var value = 50.0
+
+    var body: some View {
+        VStack {
+            CircularSlider(currentValue: $value,
+                           minValue: 1,
+                           maxValue: 60,
+                           knobColor: .init(red: 0.5, green: 0.5, blue: 0.5),
+                           progressLineColor: .init(red: 0.84, green: 0.93, blue: 0.09),
+                           font: .custom("HelveticaNeue-Light", size: 35),
+                           backgroundColor: .yellow.opacity(0.09),
+                           currentValueSuffix: " min")
+        }
+    }
+}
+```
+</td>
+<td> 
+
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="160">
+<img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="160">
+
+</td>
+</tr>
+    
 </table>
 
 
