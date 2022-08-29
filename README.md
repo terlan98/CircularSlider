@@ -14,15 +14,9 @@ A view that can be interacted with by dragging a knob over a circular path to se
 You can install `CircularSlider` by going to your Project settings > Swift Packages and add the repository by providing the GitHub URL. Alternatively, you can go to File > Swift Packages > Add Package Dependencies...
 
 ## 🚀 How do I use it?
-<table>
-<tr>
-<td width="160"> 
-
+### Simple Example
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-d.png?raw=true#gh-dark-mode-only" width="150">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/1-l.png?raw=true#gh-light-mode-only" width="150">
-
-</td>
-<td>
 
 ```swift
 struct ContentView: View {
@@ -35,18 +29,11 @@ struct ContentView: View {
     }
 }
 ```
-</td>
-</tr>
-<tr></tr>
+----
 
-<tr>
-<td width="160"> 
-
+### Fancy Example
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-d.png?raw=true#gh-dark-mode-only" width="150">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/2-l.png?raw=true#gh-light-mode-only" width="150">
-
-</td>
-<td>
 
 ```swift
 struct ContentView: View {
@@ -66,19 +53,11 @@ struct ContentView: View {
     }
 }
 ```
-</td>
+----
 
-</tr>
-<tr></tr>
-    
-<tr>
-<td width="160"> 
-
+### Even Fancier Example...
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-d.png?raw=true#gh-dark-mode-only" width="155">
 <img src="https://github.com/terlan98/CircularSlider/blob/main/Screenshots/3-l.png?raw=true#gh-light-mode-only" width="155">
-
-</td>
-<td>
 
 ```swift
 struct ContentView: View {
@@ -98,20 +77,6 @@ struct ContentView: View {
     }
 }
 ```
-</td>
-
-</tr>
-
-<tr>
-<td>
--------------------
-</td>
-<td>
-</td>
-</tr>
-
-</table>
-
 
 # License
 CircularSlider is released under the MIT license. See [LICENSE](https://github.com/terlan98/CircularSlider/blob/main/LICENSE) for details
