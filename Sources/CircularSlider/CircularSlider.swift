@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: - CircularSlider
 /// A view that can be interacted by dragging a knob over a circular path to select a value
-struct CircularSlider: View {
+public struct CircularSlider: View {
     /// The current value of the slider
     @Binding var currentValue: Double
     
@@ -58,7 +58,7 @@ struct CircularSlider: View {
     /// The angle of the circle that should be filled
     @State private var angle: Double = 0
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Circle() // background
                 .foregroundColor(backgroundColor)
