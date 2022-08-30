@@ -58,6 +58,25 @@ public struct CircularSlider: View {
     /// The angle of the circle that should be filled
     @State private var angle: Double = 0
     
+    public init(currentValue: Binding<Double>, minValue: Double = 0, maxValue: Double = 100, knobRadius: Double = 11, knobColor: Color = .white, radius: Double = 80, progressLineColor: Color = .green, trackColor: Color = .gray.opacity(0.2), lineWidth: Double = 5, font: Font = .system(size: 30), backgroundColor: Color = .clear, backgroundRadius: Double = 100, showsCurrentValueAsText: Bool = true, currentValuePrefix: String = "", currentValueSuffix: String = "") {
+        self._currentValue = currentValue
+        self.minValue = minValue
+        self.maxValue = maxValue
+        self.knobRadius = knobRadius
+        self.knobColor = knobColor
+        self.radius = radius
+        self.progressLineColor = progressLineColor
+        self.trackColor = trackColor
+        self.lineWidth = lineWidth
+        self.font = font
+        self.backgroundColor = backgroundColor
+        self.backgroundRadius = backgroundRadius
+        self.showsCurrentValueAsText = showsCurrentValueAsText
+        self.currentValuePrefix = currentValuePrefix
+        self.currentValueSuffix = currentValueSuffix
+    }
+
+    
     public var body: some View {
         ZStack {
             Circle() // background
