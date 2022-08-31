@@ -40,6 +40,9 @@ public struct CircularSlider: View {
     /// The font used for showing the current value
     var font: Font = .system(size: 30)
     
+    /// The color of the text shown in the middle
+    var textColor: Color = .primary
+    
     /// The background color of the slider
     var backgroundColor: Color = .clear
     
@@ -58,7 +61,7 @@ public struct CircularSlider: View {
     /// The angle of the circle that should be filled
     @State private var angle: Double = 0
     
-    public init(currentValue: Binding<Double>, minValue: Double = 0, maxValue: Double = 100, knobRadius: Double = 11, knobColor: Color = .white, radius: Double = 80, progressLineColor: Color = .green, trackColor: Color = .gray.opacity(0.2), lineWidth: Double = 5, font: Font = .system(size: 30), backgroundColor: Color = .clear, backgroundRadius: Double = 100, showsCurrentValueAsText: Bool = true, currentValuePrefix: String = "", currentValueSuffix: String = "") {
+    public init(currentValue: Binding<Double>, minValue: Double = 0, maxValue: Double = 100, knobRadius: Double = 11, knobColor: Color = .white, radius: Double = 80, progressLineColor: Color = .green, trackColor: Color = .gray.opacity(0.2), lineWidth: Double = 5, font: Font = .system(size: 30), textColor: Color = .primary, backgroundColor: Color = .clear, backgroundRadius: Double = 100, showsCurrentValueAsText: Bool = true, currentValuePrefix: String = "", currentValueSuffix: String = "") {
         self._currentValue = currentValue
         self.minValue = minValue
         self.maxValue = maxValue
@@ -69,6 +72,7 @@ public struct CircularSlider: View {
         self.trackColor = trackColor
         self.lineWidth = lineWidth
         self.font = font
+        self.textColor = textColor
         self.backgroundColor = backgroundColor
         self.backgroundRadius = backgroundRadius
         self.showsCurrentValueAsText = showsCurrentValueAsText
@@ -118,7 +122,7 @@ public struct CircularSlider: View {
                 Text("\(currentValuePrefix + String.init(format: "%.0f", currentValue) + (currentValueSuffix))")
                     .font(font)
                     .minimumScaleFactor(0.01)
-                    .foregroundColor(.primary)
+                    .foregroundColor(textColor)
             }
         }
         .onAppear {
