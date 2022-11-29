@@ -130,6 +130,11 @@ public struct CircularSlider: View {
             currentValue = currentValue > maxValue ? maxValue : currentValue
             angle = valueToAngle(value: currentValue)
         }
+        .onChange(of: currentValue) { newValue in // for supporting external changes
+            currentValue = newValue < minValue ? minValue : newValue
+            currentValue = newValue > maxValue ? maxValue : newValue
+            angle = valueToAngle(value: newValue)
+        }
     }
     
     /// Updates the angle and the value of the slider
@@ -152,20 +157,15 @@ public struct CircularSlider: View {
         
         let diffThreshold = 0.15 * (maxValue - minValue)
         
-        print(currentValueAsPercentage) // TODO: REMOVE
-        print(newValue, currentValue, diff) // TODO: REMOVE
-        
         if currentValueAsPercentage > 0.9
             && diff > diffThreshold {
             // for smoothing 99% to 100% transition
             currentValue = maxValue
-            angle = valueToAngle(value: currentValue)
         }
         else if currentValueAsPercentage < 0.1
                     && diff > diffThreshold {
             // for preventing direct transition to 100 from the right semicircle (ccw movement)
             currentValue = minValue
-            angle = valueToAngle(value: currentValue)
         }
         else { // default behavior
             currentValue = newValue
