@@ -57,11 +57,30 @@ public struct CircularSlider: View {
     
     /// A string that follows the current value. Shown only if `showsCurrentValueAsText` is set to true
     var currentValueSuffix = ""
-        
+    
+    /// A callback that is called when the user releases their finger, selecting a value
+    var onValueSelection: ((Double) -> ())?
+    
     /// The angle of the circle that should be filled
     @State private var angle: Double = 0
     
-    public init(currentValue: Binding<Double>, minValue: Double = 0, maxValue: Double = 100, knobRadius: Double = 11, knobColor: Color = .white, radius: Double = 80, progressLineColor: Color = .green, trackColor: Color = .gray.opacity(0.2), lineWidth: Double = 5, font: Font = .system(size: 30), textColor: Color = .primary, backgroundColor: Color = .clear, backgroundRadius: Double = 100, showsCurrentValueAsText: Bool = true, currentValuePrefix: String = "", currentValueSuffix: String = "") {
+    public init(currentValue: Binding<Double>,
+                minValue: Double = 0,
+                maxValue: Double = 100,
+                knobRadius: Double = 11,
+                knobColor: Color = .white,
+                radius: Double = 80,
+                progressLineColor: Color = .green,
+                trackColor: Color = .gray.opacity(0.2),
+                lineWidth: Double = 5,
+                font: Font = .system(size: 30),
+                textColor: Color = .primary,
+                backgroundColor: Color = .clear,
+                backgroundRadius: Double = 100,
+                showsCurrentValueAsText: Bool = true,
+                currentValuePrefix: String = "",
+                currentValueSuffix: String = "",
+                onValueSelection: ((Double) -> ())? = nil) {
         self._currentValue = currentValue
         self.minValue = minValue
         self.maxValue = maxValue
@@ -78,8 +97,8 @@ public struct CircularSlider: View {
         self.showsCurrentValueAsText = showsCurrentValueAsText
         self.currentValuePrefix = currentValuePrefix
         self.currentValueSuffix = currentValueSuffix
+        self.onValueSelection = onValueSelection
     }
-
     
     public var body: some View {
         ZStack {
@@ -113,10 +132,15 @@ public struct CircularSlider: View {
                 .padding(10)
                 .offset(y: -radius)
                 .rotationEffect(Angle.degrees(angle))
-                .gesture(DragGesture(minimumDistance: 0.0)
-                    .onChanged({ value in
-                        change(location: value.location)
-                    }))
+                .gesture(
+                    DragGesture(minimumDistance: 0.0)
+                        .onChanged { value in
+                            change(location: value.location)
+                        }
+                        .onEnded { value in
+                            onValueSelection?(currentValue)
+                        }
+                )
             
             if showsCurrentValueAsText {
                 Text("\(currentValuePrefix + String.init(format: "%.0f", currentValue) + (currentValueSuffix))")
