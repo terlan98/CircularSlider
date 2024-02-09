@@ -79,4 +79,7 @@ struct ContentView: View {
 ```
 
 # License
-CircularSlider is released under the MIT license. See [LICENSE](https://github.com/terlan98/CircularSlider/blob/main/LICENSE) for details
+CircularSlider is released under the MIT license. See [LICENSE](https://github.com/terlan98/CircularSlider/blob/main/LICENSE) for details.
+
+<a href="https://www.buymeacoffee.com/terlan98" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 2.5em !important;width: 9em !important;" ></a>
+
